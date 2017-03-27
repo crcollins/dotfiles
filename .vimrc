@@ -45,3 +45,9 @@ imap <silent> <Down> <C-o>gj
 imap <silent> <Up> <C-o>gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
+
+
+" Display relative line numbers
+set relativenumber
+" display the absolute line number at the line you're on
+set number
