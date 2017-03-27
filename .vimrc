@@ -10,8 +10,8 @@ set autoindent    " align the new line indent with the previous line
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 set pastetoggle=<F2>    " Toggle paste mode
-noremap <F3> :set invnumber<CR>
-inoremap <F3> <C-O>:set invnumber<CR>
+noremap <F3> :set invnumber<CR>:set invrelativenumber<CR>
+inoremap <F3> <C-O>:set invnumber<CR><C-O>:set invrelativenumber<CR>
 
 syntax enable
 set number             " show line numbers
