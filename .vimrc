@@ -35,7 +35,7 @@ nnoremap <leader>eb :vsp ~/.bashrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 "Mouse click changes cursor location
-set mouse=a
+"set mouse=a
 
 "Don't show intro message when starting vim
 set shortmess=atI
