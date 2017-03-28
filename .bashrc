@@ -142,3 +142,17 @@ ldup () {
         duplicity list-current-files --time $t file://$1/ | grep "$2";
     done;
 }
+
+function calctime {
+        tail *.log | grep time | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
+}
+
+function calctime2 {
+        grep time *.log | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
+}
+function gstat {
+        for f in $@ ; do
+                echo $f $(ls $f/*.log 2> /dev/null | wc -l) $( grep 'Normal termination' $f/*.log 2> /dev/null | wc -l ) $( ls $f/*.gjf 2> /dev/null | wc -l);
+        done
+}
+
