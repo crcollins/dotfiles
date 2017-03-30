@@ -66,3 +66,6 @@ nmap <silent> <Up> gk
 set relativenumber
 " display the absolute line number at the line you're on
 set number
+
+
+set si "smart indent
