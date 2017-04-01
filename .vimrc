@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
 
 " All of your Plugins must be added before the following line
