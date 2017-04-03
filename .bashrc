@@ -121,6 +121,7 @@ fi
 export PATH=/usr/local/cuda-7.5/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/chris/projects/caffe/distribute/lib:$LD_LIBRARY_PATH
+export PYTHONSTARTUP=/home/chris/.pystartup
 
 alias hist="history | grep"
 alias .e=". env/bin/activate"

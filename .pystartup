@@ -1,0 +1,15 @@
+# Include in namespace
+import math
+import os
+import sys
+import time
+
+# Try including numeric stuff
+try:
+    import numpy
+except ImportError:
+    pass
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    pass
