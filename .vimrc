@@ -9,6 +9,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-syntastic/syntastic'
 
 
 " All of your Plugins must be added before the following line
