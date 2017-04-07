@@ -3,4 +3,15 @@
 	name = Christopher Collins
 	signingkey = 86EC00F1
 [push]
-	default = simple
+    default = simple
+    followTags = true
+[alias]
+    undo = reset --soft HEAD^
+    diffc = diff --cached
+    unstage = reset HEAD
+    stash-all = stash save --include-untracked
+    glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+[transfer]
+    fsckobjects = true
+[advice]
+    statusHints = false
