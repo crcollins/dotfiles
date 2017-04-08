@@ -1,7 +1,7 @@
 [user]
-	email = crcollins@cmu.edu
-	name = Christopher Collins
-	signingkey = 86EC00F1
+    email = crcollins@cmu.edu
+    name = Christopher Collins
+    signingkey = 86EC00F1
 [push]
     default = simple
     followTags = true
