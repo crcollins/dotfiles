@@ -2,6 +2,9 @@
     email = crcollins@cmu.edu
     name = Christopher Collins
     signingkey = 86EC00F1
+[core]
+    editor = vim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [push]
     default = simple
     followTags = true
