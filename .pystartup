@@ -9,7 +9,3 @@ try:
     import numpy
 except ImportError:
     pass
-try:
-    import matplotlib.pyplot as plt
-except ImportError:
-    pass
