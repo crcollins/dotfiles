@@ -9,6 +9,11 @@
     default = simple
     followTags = true
 [alias]
+    s = status
+    d = diff
+    dc = diff --cached
+    c = commit
+    a = add
     undo = reset --soft HEAD^
     diffc = diff --cached
     unstage = reset HEAD
