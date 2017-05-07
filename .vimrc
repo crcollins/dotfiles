@@ -73,5 +73,8 @@ set relativenumber
 " display the absolute line number at the line you're on
 set number
 
+" Alias for fixing stupid typos
+command! Wq wq
+command! Q q
 
 set si "smart indent
