@@ -92,6 +92,7 @@ alias fhere="find . -name "
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
+alias g='git'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
