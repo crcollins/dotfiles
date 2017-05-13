@@ -79,3 +79,7 @@ command! Wq wq
 command! Q q
 
 set si "smart indent
+
+" Fix splitting open directions
+set splitbelow
+set splitright
