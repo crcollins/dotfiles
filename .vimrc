@@ -92,6 +92,13 @@ nmap N Nzz
 nmap } }zz
 nmap { {zz
 
+" quick pairs
+imap <leader>'  ''<ESC>i
+imap <leader>"  ""<ESC>i
+imap <leader>( ()<ESC>i
+imap <leader>[ []<ESC>i
+imap <leader>{ {}<ESC>i
+
 " mute arrow keys
 nnoremap <down>  <Nop>
 nnoremap  <left> <Nop>
