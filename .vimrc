@@ -84,3 +84,16 @@ set si "smart indent
 " Fix splitting open directions
 set splitbelow
 set splitright
+" mute arrow keys
+nnoremap <down>  <Nop>
+nnoremap  <left> <Nop>
+nnoremap <right> <Nop>
+nnoremap  <up> <Nop>
+imap <down>  <Nop>
+imap  <left> <Nop>
+imap <right> <Nop>
+imap  <up> <Nop>
+vmap <down>  <Nop>
+vmap  <left> <Nop>
+vmap <right> <Nop>
+vmap  <up> <Nop>
