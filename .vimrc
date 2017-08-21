@@ -1,4 +1,5 @@
 filetype off                  " required
+let mapleader=","       " leader is comma
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -52,7 +53,6 @@ set incsearch           " search as chars are added
 noremap gV `[v`]        
 " highlight last inserted text
 
-let mapleader=","       " leader is comma
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>eb :vsp ~/.bashrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
