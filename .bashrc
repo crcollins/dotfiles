@@ -95,6 +95,7 @@ alias ....='cd ../../../'
 alias g='git'
 alias p='python'
 alias py='python'
+alias cim='vim'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
