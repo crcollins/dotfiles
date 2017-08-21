@@ -84,6 +84,14 @@ set si "smart indent
 " Fix splitting open directions
 set splitbelow
 set splitright
+
+" autocenter the things
+nmap G Gzz
+nmap n nzz
+nmap N Nzz
+nmap } }zz
+nmap { {zz
+
 " mute arrow keys
 nnoremap <down>  <Nop>
 nnoremap  <left> <Nop>
