@@ -77,6 +77,7 @@ set number
 
 " Alias for fixing stupid typos
 command! Wq wq
+command! W w
 command! Q q
 
 set si "smart indent
