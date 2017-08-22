@@ -100,6 +100,9 @@ imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
 imap <leader>{ {}<ESC>i
 
+" trace
+nmap <leader>t oimport pdb; pdb.set_trace()<ESC>
+
 " mute arrow keys
 nnoremap <down>  <Nop>
 nnoremap  <left> <Nop>
