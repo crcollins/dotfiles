@@ -96,6 +96,8 @@ alias g='git'
 alias p='python'
 alias py='python'
 alias cim='vim'
+alias v='vim'
+alias fileparser='python ~/projects/chemtools-webapp/chemtools/fileparser.py'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
