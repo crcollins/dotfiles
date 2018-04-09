@@ -84,6 +84,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
