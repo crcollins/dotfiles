@@ -130,3 +130,20 @@ vmap  <up> <Nop>
 if v:version > 703 || v:version == 703 && has('patch541')
     set formatoptions+=j
 endif
+
+""""""""""""""""""""""
+" Multipurpose tab key: Indent at begining, else complete
+"""""""""""""""""""""""
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
+" This should load files to same spot I was before, but it does not work?
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
