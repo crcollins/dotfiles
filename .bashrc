@@ -134,8 +134,6 @@ export PYTHONSTARTUP=/home/chris/.pystartup
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
 alias hist="history | grep"
-alias .e=". env/bin/activate"
-
 
 
 ldup () {
@@ -168,3 +166,11 @@ function gstat {
         done
 }
 
+function activate_virtualenv {
+    if [ -f env/bin/activate ]; then . env/bin/activate; echo . ;
+    elif [ -f ../env/bin/activate ]; then . ../env/bin/activate; echo ..;
+    elif [ -f ../../env/bin/activate ]; then . ../../env/bin/activate; echo ...;
+    elif [ -f ../../../env/bin/activate ]; then . ../../../env/bin/activate; echo ....;
+    fi
+}
+alias av=activate_virtualenv
