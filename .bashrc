@@ -102,6 +102,7 @@ alias cim='vim'
 alias v='vim'
 alias fileparser='python ~/projects/chemtools-webapp/chemtools/fileparser.py'
 alias grepn='grep -l'
+alias filter='tr -s " " | cut -d " " -f 9- | sed -e "s/\s*->.*//" | grep -vE "^(\.|\.\.)$"'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
