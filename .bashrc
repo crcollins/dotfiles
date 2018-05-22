@@ -96,6 +96,7 @@ alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias g='git'
+alias gti='git'
 alias p='python'
 alias py='python'
 alias cim='vim'
@@ -177,3 +178,6 @@ function activate_virtualenv {
     fi
 }
 alias av=activate_virtualenv
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
