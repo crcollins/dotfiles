@@ -111,18 +111,18 @@ imap <leader>{ {}<ESC>i
 nmap <leader>t oimport pdb; pdb.set_trace()<ESC>
 
 " mute arrow keys
-nnoremap <down>  <Nop>
-nnoremap  <left> <Nop>
-nnoremap <right> <Nop>
-nnoremap  <up> <Nop>
-imap <down>  <Nop>
-imap  <left> <Nop>
-imap <right> <Nop>
-imap  <up> <Nop>
-vmap <down>  <Nop>
-vmap  <left> <Nop>
-vmap <right> <Nop>
-vmap  <up> <Nop>
+"nnoremap <down>  <Nop>
+"nnoremap  <left> <Nop>
+"nnoremap <right> <Nop>
+"nnoremap  <up> <Nop>
+"imap <down>  <Nop>
+"imap  <left> <Nop>
+"imap <right> <Nop>
+"imap  <up> <Nop>
+"vmap <down>  <Nop>
+"vmap  <left> <Nop>
+"vmap <right> <Nop>
+"vmap  <up> <Nop>
 
 
 " Fix join line
