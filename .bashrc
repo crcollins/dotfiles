@@ -86,6 +86,7 @@ fi
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+#setxkbmap -option caps:swapescape
 
 # some more ls aliases
 alias ll='ls -alF'
