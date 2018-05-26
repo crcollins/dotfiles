@@ -106,6 +106,8 @@ alias filter='tr -s " " | cut -d " " -f 9- | sed -e "s/\s*->.*//" | grep -vE "^(
 alias psg='ps aux | grep'
 alias rsa='rsync -avz'
 
+mkcd () { mkdir -p $1 ; cd $1 }
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
