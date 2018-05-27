@@ -105,6 +105,7 @@ alias grepn='grep -l'
 alias filter='tr -s " " | cut -d " " -f 9- | sed -e "s/\s*->.*//" | grep -vE "^(\.|\.\.)$"'
 alias psg='ps aux | grep'
 alias rsa='rsync -avz'
+alias hist="history | grep"
 
 mkcd () { mkdir -p $1 ; cd $1 }
 
@@ -139,7 +140,6 @@ export LD_LIBRARY_PATH=/home/chris/projects/caffe/distribute/lib:$LD_LIBRARY_PAT
 export PYTHONSTARTUP=/home/chris/.pystartup
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
-alias hist="history | grep"
 
 
 ldup () {
