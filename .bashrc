@@ -109,6 +109,7 @@ alias psg='ps aux | grep'
 alias rsa='rsync -avz'
 alias hist="history | grep"
 alias x='exit'
+alias av=activate_virtualenv
 
 mkcd () { mkdir -p $1 ; cd $1 }
 
@@ -182,4 +183,3 @@ function activate_virtualenv {
     elif [ -f ../../../env/bin/activate ]; then . ../../../env/bin/activate; echo ....;
     fi
 }
-alias av=activate_virtualenv
