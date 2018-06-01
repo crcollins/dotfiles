@@ -84,6 +84,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+function activate_virtualenv {
+    if [ -f env/bin/activate ]; then . env/bin/activate; echo . ;
+    elif [ -f ../env/bin/activate ]; then . ../env/bin/activate; echo ..;
+    elif [ -f ../../env/bin/activate ]; then . ../../env/bin/activate; echo ...;
+    elif [ -f ../../../env/bin/activate ]; then . ../../../env/bin/activate; echo ....;
+    fi
+}
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
@@ -176,10 +184,3 @@ function gstat {
         done
 }
 
-function activate_virtualenv {
-    if [ -f env/bin/activate ]; then . env/bin/activate; echo . ;
-    elif [ -f ../env/bin/activate ]; then . ../env/bin/activate; echo ..;
-    elif [ -f ../../env/bin/activate ]; then . ../../env/bin/activate; echo ...;
-    elif [ -f ../../../env/bin/activate ]; then . ../../../env/bin/activate; echo ....;
-    fi
-}
