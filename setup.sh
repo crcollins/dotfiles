@@ -14,6 +14,7 @@ set -e
 install () {
     # mv old dotfiles to backup location
     mkdir -p $DIR
+    echo Installing $FILES
     for f in $FILES;
     do
         mv ~/$f $DIR ;
@@ -22,6 +23,7 @@ install () {
 }
 
 uninstall () {
+    echo Uninstalling $FILES
     for f in $FILES ;
     do
         if [ "$1" = "-f" ] ;
