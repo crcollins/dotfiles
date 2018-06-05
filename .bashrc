@@ -117,6 +117,7 @@ alias filter='tr -s " " | cut -d " " -f 9- | sed -e "s/\s*->.*//" | grep -vE "^(
 alias psg='ps aux | grep'
 alias rsa='rsync -avz'
 alias hist="history | grep"
+alias hs="hist"
 alias x='exit'
 alias av=activate_virtualenv
 
