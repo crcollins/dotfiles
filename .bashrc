@@ -97,7 +97,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -halF'
 alias la='ls -A'
 alias l='ls -CF'
 alias fhere="find . -name "
