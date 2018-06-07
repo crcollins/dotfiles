@@ -122,6 +122,9 @@ alias x='exit'
 alias av=activate_virtualenv
 
 mkcd () { mkdir -p $1 ; cd $1 }
+function myip {
+	ifconfig | grep "inet addr" | head -n1 | sed -e 's/.*r://' -e 's/ .*//'
+}
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
