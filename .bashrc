@@ -84,7 +84,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-function activate_virtualenv {
+activate_virtualenv () {
     AC=env/bin/activate
     if [ -f $AC ]; then . $AC; echo . ;
     elif [ -f ../$AC ]; then . ../$AC; echo ..;
@@ -125,7 +125,7 @@ alias c='clear'
 alias av=activate_virtualenv
 
 mkcd () { mkdir -p $1 ; cd $1 }
-function myip {
+myip () {
 	ifconfig | grep "inet addr" | head -n1 | sed -e 's/.*r://' -e 's/ .*//'
 }
 
@@ -179,14 +179,14 @@ ldup () {
     done;
 }
 
-function calctime {
+calctime () {
         tail *.log | grep time | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
 }
 
-function calctime2 {
+calctime2 () {
         grep time *.log | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
 }
-function gstat {
+gstat () {
         for f in $@ ; do
                 echo $f $(ls $f/*.log 2> /dev/null | wc -l) $( grep 'Normal termination' $f/*.log 2> /dev/null | wc -l ) $( ls $f/*.gjf 2> /dev/null | wc -l);
         done
