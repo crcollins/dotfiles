@@ -124,7 +124,10 @@ alias x='exit'
 alias c='clear'
 alias av=activate_virtualenv
 
-mkcd () { mkdir -p $1 ; cd $1 }
+mkcd () {
+    mkdir -p $1 ;
+    cd $1
+}
 myip () {
 	ifconfig | grep "inet addr" | head -n1 | sed -e 's/.*r://' -e 's/ .*//'
 }
