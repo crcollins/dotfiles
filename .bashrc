@@ -135,7 +135,7 @@ alias hist="history | grep"
 alias hs="hist"
 alias x='exit'
 alias c='clear'
-alias av=activate_virtualenv
+alias av='activate_virtualenv'
 
 mkcd () {
     mkdir -p $1 ;
