@@ -141,6 +141,9 @@ mkcd () {
     mkdir -p $1 ;
     cd $1
 }
+lf () {
+    ls $1 | wc -l
+}
 myip () {
 	ifconfig | grep "inet addr" | head -n1 | sed -e 's/.*r://' -e 's/ .*//'
 }
