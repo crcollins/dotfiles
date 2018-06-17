@@ -108,6 +108,12 @@ fs() {
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export PATH=/usr/local/cuda-7.5/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/chris/projects/caffe/distribute/lib:$LD_LIBRARY_PATH
+export PYTHONSTARTUP=/home/chris/.pystartup
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+
 
 # some more ls aliases
 alias ll='ls -halF'
@@ -172,12 +178,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-export PATH=/usr/local/cuda-7.5/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/chris/projects/caffe/distribute/lib:$LD_LIBRARY_PATH
-export PYTHONSTARTUP=/home/chris/.pystartup
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
 
 
