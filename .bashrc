@@ -105,44 +105,6 @@ fs() {
         du $arg .[^.]* ./*;
     fi;
 }
-
-export VISUAL=vim
-export EDITOR="$VISUAL"
-export PATH=/usr/local/cuda-7.5/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/chris/projects/caffe/distribute/lib:$LD_LIBRARY_PATH
-export PYTHONSTARTUP=/home/chris/.pystartup
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-
-
-# some more ls aliases
-alias ll='ls -halF'
-alias la='ls -A'
-alias l='ls -CF'
-alias fhere='find . -name'
-alias ..='cd ..'
-alias ...='cd ../../'
-alias ....='cd ../../../'
-alias .4='cd ../../../../'
-alias .5='cd ../../../../../'
-alias g='git'
-alias sr='screen -r'
-alias p='python'
-alias py='python'
-alias cim='vim'
-alias svim='sudo vim'
-alias v='vim'
-alias fileparser='python ~/projects/chemtools-webapp/chemtools/fileparser.py'
-alias grepn='grep -l'
-alias filter='tr -s " " | cut -d " " -f 9- | sed -e "s/\s*->.*//" | grep -vE "^(\.|\.\.)$"'
-alias psg='ps aux | grep'
-alias rsa='rsync -avz'
-alias hist='history | grep'
-alias hs='hist'
-alias x='exit'
-alias c='clear'
-alias av='activate_virtualenv'
-
 mkcd () {
     mkdir -p $1 ;
     cd $1
@@ -182,6 +144,44 @@ gstat () {
                 echo $f $(ls $f/*.log 2> /dev/null | wc -l) $( grep 'Normal termination' $f/*.log 2> /dev/null | wc -l ) $( ls $f/*.gjf 2> /dev/null | wc -l);
         done
 }
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+export PATH=/usr/local/cuda-7.5/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/chris/projects/caffe/distribute/lib:$LD_LIBRARY_PATH
+export PYTHONSTARTUP=/home/chris/.pystartup
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+
+
+# some more ls aliases
+alias ll='ls -halF'
+alias la='ls -A'
+alias l='ls -CF'
+alias fhere='find . -name'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+alias g='git'
+alias sr='screen -r'
+alias p='python'
+alias py='python'
+alias cim='vim'
+alias svim='sudo vim'
+alias v='vim'
+alias fileparser='python ~/projects/chemtools-webapp/chemtools/fileparser.py'
+alias grepn='grep -l'
+alias filter='tr -s " " | cut -d " " -f 9- | sed -e "s/\s*->.*//" | grep -vE "^(\.|\.\.)$"'
+alias psg='ps aux | grep'
+alias rsa='rsync -avz'
+alias hist='history | grep'
+alias hs='hist'
+alias x='exit'
+alias c='clear'
+alias av='activate_virtualenv'
+
 
 
 # Add an "alert" alias for long running commands.  Use like so:
