@@ -139,6 +139,10 @@ calctime () {
 calctime2 () {
         grep time *.log | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
 }
+calctime3 () {
+	num=$(ls *.log | wc -l);
+	grep time *.log | sed -e 's/^.*: *//' | awk -v num="$num" '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total/num }'
+}
 gstat () {
         for f in $@ ; do
                 echo $f $(ls $f/*.log 2> /dev/null | wc -l) $( grep 'Normal termination' $f/*.log 2> /dev/null | wc -l ) $( ls $f/*.gjf 2> /dev/null | wc -l);
