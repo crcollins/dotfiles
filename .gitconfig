@@ -14,6 +14,7 @@
     d = diff
     dc = diff --cached
     c = commit
+    cm = commit -m
     a = add
     undo = reset --soft HEAD^
     diffc = diff --cached
