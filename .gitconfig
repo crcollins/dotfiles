@@ -16,6 +16,7 @@
     c = commit
     cm = commit -m
     a = add
+    ap = add -p
     undo = reset --soft HEAD^
     unstage = reset HEAD
     stash-all = stash save --include-untracked
