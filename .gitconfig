@@ -12,6 +12,7 @@
     s = status
     l = log
     d = diff
+    b = bisect
     dc = diff --cached
     c = commit
     cm = commit -m
