@@ -28,3 +28,5 @@
     fsckobjects = true
 [advice]
     statusHints = false
+[diff]
+    algorithm = patience
