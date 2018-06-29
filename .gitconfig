@@ -14,6 +14,7 @@
     d = diff
     b = bisect
     dc = diff --cached
+    dp = diff HEAD^ HEAD
     c = commit
     cm = commit -m
     ca = commit --amend --no-edit
