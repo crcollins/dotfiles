@@ -13,6 +13,7 @@
     l = log
     d = diff
     b = bisect
+    br = branch
     dc = diff --cached
     dp = diff HEAD^ HEAD
     c = commit
