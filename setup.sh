@@ -1,5 +1,5 @@
 DIR=bak
-FILES=".bashrc .vimrc .gitconfig .pystartup"
+FILES=".bashrc .vimrc .gitconfig .gitignore .pystartup"
  
 # Hack to allow dry runs
 COM=
