@@ -148,6 +148,10 @@ gstat () {
                 echo $f $(ls $f/*.log 2> /dev/null | wc -l) $( grep 'Normal termination' $f/*.log 2> /dev/null | wc -l ) $( ls $f/*.gjf 2> /dev/null | wc -l);
         done
 }
+swap () {
+    TMPFILE=$(mktemp $(dirname "$1")/XXXXXX)
+    mv "$1" "$TMPFILE" && mv "$2" "$1" && mv "$TMPFILE" "$2";
+}
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
