@@ -3,6 +3,7 @@ import math
 import os
 import sys
 import time
+import random
 
 # Try including numeric stuff
 try:

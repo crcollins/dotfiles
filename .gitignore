@@ -1,0 +1,8 @@
+*.pyc
+*.o
+*.swp
+*.so
+*.a
+.coverage
+env/
+venv/

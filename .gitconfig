@@ -5,17 +5,26 @@
 [core]
     editor = vim
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.gitignore
 [push]
     default = simple
     followTags = true
 [alias]
     s = status
+    l = log
     d = diff
+    b = bisect
+    br = branch
     dc = diff --cached
+    dp = diff HEAD^ HEAD
     c = commit
+    cl = clone
+    cm = commit -m
+    ca = commit --amend --no-edit
+    cam = commit --amend
     a = add
+    ap = add -p
     undo = reset --soft HEAD^
-    diffc = diff --cached
     unstage = reset HEAD
     stash-all = stash save --include-untracked
     glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
@@ -23,3 +32,5 @@
     fsckobjects = true
 [advice]
     statusHints = false
+[diff]
+    algorithm = patience
