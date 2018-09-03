@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+FILE=~/til.log
+
 # Prevents newlines from getting removed
 IFS=
 edit () {
@@ -15,10 +17,10 @@ then
     text=$(edit)
 elif [ "$1" == "read" ] ;
 then
-    less ~/til.log ;
+    less $FILE ;
     exit ;
 else
     text="$1"
 fi
 
-echo $(date --iso-8601) ${text//$'\n'/$'\n'         + } >> ~/til.log
+echo $(date --iso-8601) ${text//$'\n'/$'\n'         + } >> $FILE
