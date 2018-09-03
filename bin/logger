@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+FILE=$1
+shift
+
+# Prevents newlines from getting removed
+IFS=
+edit () {
+    (
+        trap 'rm ~/tmp.$$' exit;
+        $EDITOR ~/tmp.$$ > /dev/tty;
+        cat ~/tmp.$$
+    )
+}
+
+if [ -z "$1" ] ;
+then
+    text=$(edit)
+elif [ "$1" == "read" ] ;
+then
+    less $FILE ;
+    exit ;
+else
+    text="$1"
+fi
+
+echo $(date --iso-8601) ${text//$'\n'/$'\n'         + } >> $FILE
