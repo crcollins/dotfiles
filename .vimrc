@@ -101,11 +101,11 @@ nmap } }zz
 nmap { {zz
 
 " quick pairs
-imap <leader>'  ''<ESC>i
-imap <leader>"  ""<ESC>i
-imap <leader>( ()<ESC>i
-imap <leader>[ []<ESC>i
-imap <leader>{ {}<ESC>i
+"imap <leader>'  ''<ESC>i
+"imap <leader>"  ""<ESC>i
+"imap <leader>( ()<ESC>i
+"imap <leader>[ []<ESC>i
+"imap <leader>{ {}<ESC>i
 
 " trace
 nmap <leader>t oimport pdb; pdb.set_trace()<ESC>
