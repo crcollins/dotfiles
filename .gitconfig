@@ -20,6 +20,7 @@
     c = commit
     cl = clone
     cm = commit -m
+    co = checkout
     ca = commit --amend --no-edit
     cam = commit --amend
     a = add
