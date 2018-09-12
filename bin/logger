@@ -20,7 +20,7 @@ then
     text=$(edit)
 elif [ "$1" == "read" ] ;
 then
-    less $FILE ;
+    less +G $FILE ;
     exit ;
 else
     text="$1"
