@@ -193,6 +193,7 @@ alias hs='hist'
 alias x='exit'
 alias c='clear'
 alias av='activate_virtualenv'
+alias reswap='sudo swapoff -a && sudo swapon -a'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
