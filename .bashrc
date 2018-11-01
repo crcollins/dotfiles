@@ -133,15 +133,15 @@ ldup () {
 }
 
 calctime () {
-        tail *.log | grep time | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
+        tail *.log | grep "cpu time" | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
 }
 
 calctime2 () {
-        grep time *.log | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
+        grep "cpu time" *.log | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
 }
 calctime3 () {
 	num=$(ls *.log | wc -l);
-	grep time *.log | sed -e 's/^.*: *//' | awk -v num="$num" '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total/num }'
+	grep "cpu time" *.log | sed -e 's/^.*: *//' | awk -v num="$num" '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total/num }'
 }
 gstat () {
         for f in $@ ; do
