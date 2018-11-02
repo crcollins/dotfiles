@@ -91,6 +91,9 @@ command! Q q
 set splitbelow
 set splitright
 
+set undodir=~/.vim/undodir
+set undofile
+
 " autocenter the things
 nmap G Gzz
 nmap n nzz
