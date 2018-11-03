@@ -20,6 +20,7 @@ then
     text=$(edit)
 elif [ "$1" == "read" ] ;
 then
+    touch -a $FILE ;
     less +G $FILE ;
     exit ;
 else
