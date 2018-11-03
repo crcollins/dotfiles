@@ -196,6 +196,7 @@ alias c='clear'
 alias av='activate_virtualenv'
 alias reswap='sudo swapoff -a && sudo swapon -a'
 alias serve='python -m SimpleHTTPServer'
+alias rn='ranger'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
