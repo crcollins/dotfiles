@@ -20,6 +20,8 @@ install () {
         mv ~/$f $DIR ;
         ln -s $PWD/$f ~/$f ;
     done
+
+    echo "You also should run `ln -s ln -s bin/ ~/bin`"
 }
 
 uninstall () {
@@ -34,6 +36,7 @@ uninstall () {
         # mv old dotfiles back
         mv $DIR/$f ~/$f ;
     done
+    echo "You also should unlink `~/bin`"
 }
 
 main () {
