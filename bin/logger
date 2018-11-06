@@ -24,7 +24,7 @@ then
     less +G $FILE ;
     exit ;
 else
-    text="$1"
+    text="$@"
 fi
 
 DATE=$(date --iso-8601)
