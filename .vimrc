@@ -111,6 +111,9 @@ nmap { {zz
 " trace
 nmap <leader>t oimport pdb; pdb.set_trace()<ESC>
 
+" Fix indention for comments in python
+set nosmartindent
+
 " mute arrow keys
 "nnoremap <down>  <Nop>
 "nnoremap  <left> <Nop>
