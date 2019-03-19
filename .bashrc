@@ -197,6 +197,7 @@ alias c='clear'
 alias av='activate_virtualenv'
 alias reswap='sudo swapoff -a && sudo swapon -a'
 alias serve='python -m SimpleHTTPServer'
+alias serve3='python -m http.server'
 alias rn='ranger'
 
 
