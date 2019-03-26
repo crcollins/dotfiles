@@ -199,6 +199,7 @@ alias reswap='sudo swapoff -a && sudo swapon -a'
 alias serve='python -m SimpleHTTPServer'
 alias serve3='python -m http.server'
 alias rn='ranger'
+alias pdf='zathura'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
