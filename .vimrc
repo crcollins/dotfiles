@@ -46,11 +46,9 @@ set showmatch           " show matching {([])}
 set incsearch           " search as chars are added
 "set hlsearch            " highlight search
 
-"folds?
-"set foldenable
-"noremap <space> za
-noremap gV `[v`]        
 " highlight last inserted text
+noremap gV `[v`]
+
 
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>eb :vsp ~/.bashrc<CR>
@@ -113,21 +111,6 @@ nmap <leader>t oimport pdb; pdb.set_trace()<ESC>
 
 " Fix indention for comments in python
 set nosmartindent
-
-" mute arrow keys
-"nnoremap <down>  <Nop>
-"nnoremap  <left> <Nop>
-"nnoremap <right> <Nop>
-"nnoremap  <up> <Nop>
-"imap <down>  <Nop>
-"imap  <left> <Nop>
-"imap <right> <Nop>
-"imap  <up> <Nop>
-"vmap <down>  <Nop>
-"vmap  <left> <Nop>
-"vmap <right> <Nop>
-"vmap  <up> <Nop>
-
 
 " Fix join line
 if v:version > 703 || v:version == 703 && has('patch541')
