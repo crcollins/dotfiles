@@ -14,7 +14,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'PeterRincker/vim-argumentative'
+Plugin 'wellle/targets.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
