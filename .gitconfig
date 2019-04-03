@@ -35,3 +35,5 @@
     statusHints = false
 [diff]
     algorithm = patience
+[fetch]
+    fsckobjects = false
