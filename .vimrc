@@ -17,6 +17,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'wellle/targets.vim'
+Plugin 'lervag/vimtex'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
@@ -25,6 +26,14 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Plugin Configs ==============================
+
+" Vimtex configuration
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
 
 " YouCompleteMe configuration
 let g:ycm_autoclose_preview_window_after_insertion = 1
