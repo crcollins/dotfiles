@@ -60,23 +60,48 @@ set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set shiftround    " round indent to multiple of 'shiftwidth'
 set autoindent    " align the new line indent with the previous line
 set backspace=indent,eol,start
-
-"Clear all trailing whitespace"
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
-set pastetoggle=<F2>    " Toggle paste mode
-noremap <F3> :set invnumber<CR>:set invrelativenumber<CR>
-inoremap <F3> <C-O>:set invnumber<CR><C-O>:set invrelativenumber<CR>
-
 syntax enable
 set number             " show line numbers
-
 set cursorline          " show cursor line
 set lazyredraw          " lazy redraw screen
 set wildmenu            " tab completion for filenames
 set showmatch           " show matching {([])}
 set incsearch           " search as chars are added
 "set hlsearch            " highlight search
+
+" Display relative line numbers
+set relativenumber
+" display the absolute line number at the line you're on
+set number
+" Fix splitting open directions
+set splitbelow
+set splitright
+
+set undodir=~/.vim/undodir
+set undofile
+set pastetoggle=<F2>    " Toggle paste mode
+
+"Mouse click changes cursor location
+"set mouse=a
+
+"Don't show intro message when starting vim
+set shortmess=atI
+
+" Fix indention for comments in python
+set nosmartindent
+
+" Fix join line
+if v:version > 703 || v:version == 703 && has('patch541')
+    set formatoptions+=j
+endif
+
+
+"Clear all trailing whitespace"
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+noremap <F3> :set invnumber<CR>:set invrelativenumber<CR>
+inoremap <F3> <C-O>:set invnumber<CR><C-O>:set invrelativenumber<CR>
+
 
 " highlight last inserted text
 noremap gV `[v`]
@@ -85,12 +110,6 @@ noremap gV `[v`]
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>eb :vsp ~/.bashrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-
-"Mouse click changes cursor location
-"set mouse=a
-
-"Don't show intro message when starting vim
-set shortmess=atI
 
 "Map up/down to be visual line rather than actual
 imap <silent> <Down> <C-o>gj
@@ -107,22 +126,12 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Display relative line numbers
-set relativenumber
-" display the absolute line number at the line you're on
-set number
 
 " Alias for fixing stupid typos
 command! Wq wq
 command! W w
 command! Q q
 
-" Fix splitting open directions
-set splitbelow
-set splitright
-
-set undodir=~/.vim/undodir
-set undofile
 
 " autocenter the things
 nmap G Gzz
@@ -140,14 +149,6 @@ nmap { {zz
 
 " trace
 nmap <leader>t oimport pdb; pdb.set_trace()<ESC>
-
-" Fix indention for comments in python
-set nosmartindent
-
-" Fix join line
-if v:version > 703 || v:version == 703 && has('patch541')
-    set formatoptions+=j
-endif
 
 """"""""""""""""""""""
 " Multipurpose tab key: Indent at begining, else complete
