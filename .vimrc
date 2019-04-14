@@ -76,6 +76,8 @@ set pastetoggle=<F2>    " Toggle paste mode
 "set mouse=a             " Mouse click changes cursor location
 set shortmess=atI       "Don't show intro message when starting vim
 set nosmartindent       " Fix indention for comments in python
+set ttyfast             " Optimize for fast terminal connections
+set ruler               " Show the cursor position
 
 " Fix splitting open directions
 set splitbelow
