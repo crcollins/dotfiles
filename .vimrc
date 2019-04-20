@@ -94,11 +94,12 @@ endif
 
 " Mappings ============================================
 
-"Clear all trailing whitespace"
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 noremap <F3> :set invnumber<CR>:set invrelativenumber<CR>
 inoremap <F3> <C-O>:set invnumber<CR><C-O>:set invrelativenumber<CR>
+
+"Clear all trailing whitespace"
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 
 " highlight last inserted text
