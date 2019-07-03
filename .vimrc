@@ -78,6 +78,7 @@ set shortmess=atI       "Don't show intro message when starting vim
 set nosmartindent       " Fix indention for comments in python
 set ttyfast             " Optimize for fast terminal connections
 set ruler               " Show the cursor position
+set nomodeline          " Turn off modline to prevent RE vuln
 
 " Fix splitting open directions
 set splitbelow
