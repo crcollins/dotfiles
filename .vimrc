@@ -143,3 +143,7 @@ command! Q q
 
 " This should load files to same spot I was before, but it does not work?
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+
+"replace the word under cursor
+nnoremap <leader>* :%s/\<<c-r><c-w>\>//g<left><left>
