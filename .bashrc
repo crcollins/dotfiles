@@ -131,6 +131,9 @@ ldup () {
         duplicity list-current-files --time $t file://$1/ | grep "$2";
     done;
 }
+calctimeone () {
+        tail $1 | grep "cpu time" | sed -e 's/^.*: *//' | awk '{total = ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
+}
 
 calctime () {
         tail *.log | grep "cpu time" | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
