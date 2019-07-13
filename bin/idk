@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+logger ~/idk.log false "$@"
