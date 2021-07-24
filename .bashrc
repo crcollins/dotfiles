@@ -168,56 +168,10 @@ export LD_LIBRARY_PATH=/home/chris/projects/caffe/distribute/lib:$LD_LIBRARY_PAT
 export PYTHONSTARTUP=/home/chris/.pystartup
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
-
-# Aliases
-alias ll='ls -halF'
-alias la='ls -A'
-alias l='ls -CF'
-alias fh='find . -name'
-alias ..='cd ..'
-alias ...='cd ../../'
-alias ....='cd ../../../'
-alias .....='cd ../../../../'
-alias ......='cd ../../../../../'
-alias g='git'
-alias gs='git status'
-alias gti='git'
-alias gut='git'
-alias mdkir='mkdir'
-alias sr='screen -r'
-alias b='bash'
-alias p='python'
-alias p3='python3'
-alias py='python'
-alias py3='python3'
-alias cim='vim'
-alias im='vim'
-alias svim='sudo vim'
-alias sv='sudo vim'
-alias v='vim'
-alias vd='vim "+normal G$" ~/did.log'
-alias vb='vim ~/.bashrc'
-alias sb='. ~/.bashrc'
-alias fileparser='python ~/projects/chemtools-webapp/chemtools/fileparser.py'
-alias fp='fileparser'
-alias grepn='grep -l'
-alias filter='tr -s " " | cut -d " " -f 9- | sed -e "s/\s*->.*//" | grep -vE "^(\.|\.\.)$"'
-alias empty='grep " 0 "'
-alias emptyf='empty | filter'
-alias psg='ps aux | grep'
-alias rsa='rsync -avz'
-alias hist='history | grep'
-alias hs='hist'
-alias x='exit'
-alias c='clear'
-alias av='activate_virtualenv'
-alias reswap='sudo swapoff -a && sudo swapon -a'
-alias resawp='reswap'
-alias serve='python -m SimpleHTTPServer'
-alias serve3='python -m http.server'
-alias rn='ranger'
-alias pdf='zathura'
-
+alias ls='ls --color'
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
