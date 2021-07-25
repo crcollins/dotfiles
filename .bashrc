@@ -156,19 +156,26 @@ swap () {
     mv "$1" "$TMPFILE" && mv "$2" "$1" && mv "$TMPFILE" "$2";
 }
 
-# Swap caps and escape
-#setxkbmap -option caps:swapescape
 
 # Export variables
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export PATH=/usr/local/cuda-7.5/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/chris/projects/caffe/distribute/lib:$LD_LIBRARY_PATH
-export PYTHONSTARTUP=/home/chris/.pystartup
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
-alias ls='ls --color'
+# OS specific settings
+case "$(uname -s)" in
+    Linux)
+        export PATH=/usr/local/cuda-7.5/bin:$PATH
+        export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:/home/chris/projects/caffe/distribute/lib:$LD_LIBRARY_PATH
+        export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+
+        # Swap caps and escape
+        setxkbmap -option caps:swapescape
+        ;;
+    Darwin)
+        export OPENBLAS=$(/opt/homebrew/bin/brew --prefix openblas)
+        ;;
+esac
+
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
