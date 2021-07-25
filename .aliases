@@ -39,9 +39,16 @@ alias hs='hist'
 alias x='exit'
 alias c='clear'
 alias av='source $(find -wholename ".*/bin/activate")'
-alias reswap='sudo swapoff -a && sudo swapon -a'
-alias resawp='reswap'
 alias serve='python -m SimpleHTTPServer'
 alias serve3='python -m http.server'
-alias rn='ranger'
-alias pdf='zathura'
+
+case "$(uname -s)" in
+    Linux)
+        alias reswap='sudo swapoff -a && sudo swapon -a'
+        alias resawp='reswap'
+        alias rn='ranger'
+        alias pdf='zathura'
+        ;;
+    Darwin)
+        ;;
+esac
