@@ -25,7 +25,7 @@ install () {
         ln -s $PWD/$f ~/$f ;
     done
 
-    echo "You also should run `ln -s bin/ ~/bin`"
+    echo 'You also should run "ln -s bin/ ~/bin"'
 }
 
 uninstall () {
