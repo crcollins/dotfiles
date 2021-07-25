@@ -86,7 +86,9 @@ case "$(uname -s)" in
         export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
         # Swap caps and escape
-        setxkbmap -option caps:swapescape
+        if [ -n "$DISPLAY" ]; then
+            setxkbmap -option caps:swapescape
+        fi
         ;;
     Darwin)
         export OPENBLAS=$(/opt/homebrew/bin/brew --prefix openblas)
