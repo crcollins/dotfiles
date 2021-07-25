@@ -84,78 +84,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-activate_virtualenv () {
-    AC=env/bin/activate
-    if [ -f $AC ]; then . $AC; echo . ;
-    elif [ -f ../$AC ]; then . ../$AC; echo ..;
-    elif [ -f ../../$AC ]; then . ../../$AC; echo ...;
-    elif [ -f ../../../$AC ]; then . ../../../$AC; echo ....;
-    fi
-}
-# https://github.com/mathiasbynens/dotfiles/blob/master/.functions
-fs () {
-    if du -b /dev/null > /dev/null 2>&1; then
-        local arg=-sbh;
-    else
-        local arg=-sh;
-    fi
-    if [[ -n "$@" ]]; then
-        du $arg -- "$@";
-    else
-        du $arg .[^.]* ./*;
-    fi;
-}
-mkcd () {
-    mkdir -p $1 ;
-    cd $1
-}
-lf () {
-    ls $1 | wc -l
-}
-myip () {
-	ifconfig | grep "inet addr" | head -n1 | sed -e 's/.*r://' -e 's/ .*//'
-}
-ldup () {
-    for f in $(ls $1/duplicity-*.manifest.gpg); do
-        echo "========================================================================"; 
-        echo $f;
-        n=$(basename $f .manifest.gpg);
-        prefix=$(echo $n | awk 'BEGIN { FS = "." } ;{ print $1 }');
-        if [[ "$prefix" == "duplicity-full" ]]; then
-            t=$(echo $n | awk 'BEGIN { FS = "." } ;{ print $2 }');
-        else
-            t=$(echo $n | awk 'BEGIN { FS = "." } ;{ print $4 }');
-        fi;
-        echo -e "Creation time:\t" $t;
-        echo "------------------------------------------------------------------------";
-        duplicity list-current-files --time $t file://$1/ | grep "$2";
-    done;
-}
-calctimeone () {
-        tail $1 | grep "cpu time" | sed -e 's/^.*: *//' | awk '{total = ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
-}
-
-calctime () {
-        tail *.log | grep "cpu time" | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
-}
-
-calctime2 () {
-        grep "cpu time" *.log | sed -e 's/^.*: *//' | awk '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total }'
-}
-calctime3 () {
-	num=$(ls *.log | wc -l);
-	grep "cpu time" *.log | sed -e 's/^.*: *//' | awk -v num="$num" '{total += ($1 * 24) + ($3) + ($5 / 60) + ($7 / 3600) } END {print total/num }'
-}
-gstat () {
-        for f in $@ ; do
-                echo $f $(ls $f/*.log 2> /dev/null | wc -l) $( grep 'Normal termination' $f/*.log 2> /dev/null | wc -l ) $( ls $f/*.gjf 2> /dev/null | wc -l);
-        done
-}
-swap () {
-    TMPFILE=$(mktemp $(dirname "$1")/XXXXXX)
-    mv "$1" "$TMPFILE" && mv "$2" "$1" && mv "$TMPFILE" "$2";
-}
-
 
 # Export variables
 export VISUAL=vim
@@ -175,6 +103,10 @@ case "$(uname -s)" in
         export OPENBLAS=$(/opt/homebrew/bin/brew --prefix openblas)
         ;;
 esac
+
+if [ -f ~/.functions ]; then
+    . ~/.functions
+fi
 
 if [ -f ~/.aliases ]; then
     . ~/.aliases
