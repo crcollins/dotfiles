@@ -19,7 +19,9 @@ install () {
     echo Installing $FILES
     for f in $FILES;
     do
-        mv ~/$f $DIR ;
+        if [ -e ~/$f ]; then
+            mv ~/$f $DIR ;
+        fi
         ln -s $PWD/$f ~/$f ;
     done
 
