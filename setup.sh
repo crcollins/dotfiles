@@ -25,7 +25,10 @@ install () {
         ln -s $PWD/$f ~/$f ;
     done
 
-    echo 'You also should run "ln -s bin/ ~/bin"'
+    echo 'You also should run:'
+    echo '    ln -s bin/ ~/bin'
+    echo '    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
+    echo '    vim +PluginInstall +qall'
 }
 
 uninstall () {
@@ -41,7 +44,7 @@ uninstall () {
         # mv old dotfiles back
         mv $DIR/$f ~/$f ;
     done
-    echo "You also should unlink `~/bin`"
+    echo "You also should unlink '~/bin' and remove ~/.vim/bundle/"
 }
 
 main () {
