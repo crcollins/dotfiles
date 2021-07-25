@@ -37,3 +37,5 @@
     algorithm = patience
 [fetch]
     fsckobjects = false
+[init]
+	defaultBranch = main
