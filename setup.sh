@@ -1,4 +1,4 @@
-DIR=bak
+BAK_DIR=bak
 FILES=$(ls -ap | grep -v / | grep -E '^\.')
  
 # Hack to allow dry runs
@@ -13,6 +13,7 @@ set -e
 
 install () {
     # mv old dotfiles to backup location
+    DIR=$BAK_DIR/$(date +%s)
     mkdir -p $DIR
     echo Installing $FILES
     for f in $FILES;
@@ -26,6 +27,7 @@ install () {
 
 uninstall () {
     echo Uninstalling $FILES
+    DIR=$(ls $BAK_DIR | sort -nr | head -n 1)
     for f in $FILES ;
     do
         if [ "$1" = "-f" ] ;
