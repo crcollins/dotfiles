@@ -1,5 +1,5 @@
 DIR=bak
-FILES=".bashrc .vimrc .gitconfig .gitignore .pystartup"
+FILES=$(ls -ap | grep -v / | grep -E '^\.')
  
 # Hack to allow dry runs
 COM=
