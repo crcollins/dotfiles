@@ -1,5 +1,6 @@
 BAK_DIR=bak
-FILES=$(ls -ap | grep -v / | grep -E '^\.')
+#                skip dir    skip non-dot    skip vim .swp files
+FILES=$(ls -ap | grep -v / | grep -E '^\.' | grep -v -E '\..*\..*\..*')
  
 # Hack to allow dry runs
 COM=
