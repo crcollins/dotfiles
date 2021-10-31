@@ -61,3 +61,6 @@ swap () {
     TMPFILE=$(mktemp $(dirname "$1")/XXXXXX)
     mv "$1" "$TMPFILE" && mv "$2" "$1" && mv "$TMPFILE" "$2";
 }
+latency () {
+    curl -L -w "\ntime_namelookup: %{time_namelookup}\ntime_connect: %{time_connect}\ntime_appconnect: %{time_appconnect}\ntime_pretransfer: %{time_pretransfer}\ntime_redirect: %{time_redirect}\ntime_starttransfer: %{time_starttransfer}\ntime_total: %{time_total}\n" $1 2>/dev/null | tail -n7
+}
