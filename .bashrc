@@ -92,6 +92,7 @@ case "$(uname -s)" in
         ;;
     Darwin)
         export OPENBLAS=$(/opt/homebrew/bin/brew --prefix openblas)
+        export CLICOLOR=1
         ;;
 esac
 
